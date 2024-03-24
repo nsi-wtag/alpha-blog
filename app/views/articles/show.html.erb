@@ -1,2 +1,6 @@
 <h1><%= @article.title%></h1>
 <p><%= @article.description%></p>
+
+<%= link_to 'Edit Article', edit_article_path(@article) %> |
+<%= link_to 'Delete Article', article_path(@article), data: { "turbo-method": :delete } %> |
+<%= link_to 'Article Listings', articles_path %>
