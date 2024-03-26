@@ -24,5 +24,5 @@
 
   <br/>
 
-  <%= f.submit "Sign up" %>
+  <%= f.submit @user.new_record? ? "Sign up" : "Update user" %>
 <% end %>
