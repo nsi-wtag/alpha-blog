@@ -1,0 +1,23 @@
+<h1>All Bloggers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Number of Articles</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.username%></td>
+        <td><%= user.email%></td>
+        <td><%= user.articles.length%> articles</td>
+        <td><%= link_to "View Profile", user %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
