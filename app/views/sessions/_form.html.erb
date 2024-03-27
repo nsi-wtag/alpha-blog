@@ -1,0 +1,13 @@
+<%= form_with(scope: :session, local: true) do |f| %>
+  <div>
+    <%= f.label :email %><br/>
+    <%= f.email_field :email, placeholder: "Enter your email" %>
+  </div>
+
+  <div>
+    <%= f.label :password %><br/>
+    <%= f.password_field :password, placeholder: "Enter your password" %>
+  </div>
+
+  <%= f.submit "Log in" %>
+<% end %>
