@@ -1,5 +1,7 @@
 <h1>Articles Listing</h1>
 
-<%= link_to "Create New Article", new_article_path %><br/>
+<% if logged_in? %>
+  <%= link_to "Create New Article", new_article_path %><br/>
+<% end %>
 
 <%= render 'article' %>
