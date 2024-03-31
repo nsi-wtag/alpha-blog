@@ -1,0 +1,20 @@
+<h1>Create New Category</h1>
+
+<% if @category.errors.any? %>
+  <ul>
+    <% @category.errors.full_messages.each do |error_msg| %>
+      <li><%= error_msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with(model: @category, local: true) do |f| %>
+  <div>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name, placeholder: "Enter category name" %>
+  </div>
+
+  <br/>
+
+  <%= f.submit %>
+<% end %>
